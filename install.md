@@ -74,3 +74,7 @@ ping baidu.com
 > Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/&#36;repo/os/&#36;arch
 
     pacman -Syyu
+
+> Server = https://repo.huaweicloud.com/archlinux/$repo/os/$arch
+>
+> Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
