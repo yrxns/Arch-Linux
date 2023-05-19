@@ -75,3 +75,83 @@ ping baidu.com
 
     pacman -Syyu
 
+### 安装开始
+
+    pacstrap /mnt base linux linux-firmware base-devel
+
+    pacstrap /mnt networkmanager dhcpcd vim
+
+生成分区表
+
+    genfstab -U /mnt >> /mnt/etc/fstab
+
+进入新系统
+
+    arch-chroot /mnt
+
+设置时区
+
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+设置硬件时间
+
+    hwclock --systohc
+
+本地化设置
+
+    vim /etc/locale.gen
+    # en_US.UTF-8 UTF-8
+
+
+
+    locale-gen
+
+    echo LANG=en_US.UTF-8 >> /etc/locale.conf
+
+    vim /etc/hostname
+    yrxns
+
+
+
+    vim /etc/hosts
+    127.0.0.1    localhost
+    ::1        localhost
+    127.0.1.1    yrxns.localdomain    yrxns
+
+设置root用户的密码
+
+    passwd
+
+查看cpu和显卡信息
+
+    pacman -S neofetch
+
+    neofetch
+
+    pacman -S intel-ucode
+
+    pacman -S amd-ucode
+
+UEFI启动模式
+
+    pacman -S grub efibootmgr
+
+    mkdir /boot/grub
+
+    uname -m（确定系统架构）
+
+    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+
+    grub-mkconfig -o /boot/grub/grub.cfg
+
+退出新系统
+
+    exit
+
+退出挂载
+
+    umount -R /mnt
+
+重启
+
+    reboot
