@@ -23,3 +23,7 @@
     fc-list | grep "Hack"
 
     sudo setfont Hack
+
+检查能否正常显示小图标
+
+[cheat-sheet](https://www.nerdfonts.com/cheat-sheet)
