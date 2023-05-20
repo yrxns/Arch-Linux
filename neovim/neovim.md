@@ -2,10 +2,24 @@
 
 [nerd-fonts](https://github.com/ryanoasis/nerd-fonts#option-2-release-archive-download)
 
-克隆仓库
-
 下载 hack 字体压缩包
+
+    wget https://github.com/yanoasis/nerd-fonts/releases/download/v3.0.1/Hack.tar.xz
 
 安装 hack 字体
 
-    ./install.sh Hack
+    sudo apt install unar
+
+    unar Hack.tar.xz
+
+    tar -xf Hack.tar.xz
+
+    cp -r Hack  ~/.local/share/fonts/
+
+    cp -r Hack  /usr/local/share/fonts/
+
+    fc-cache -f -v
+
+    fc-list | grep "Hack"
+
+    sudo setfont Hack
