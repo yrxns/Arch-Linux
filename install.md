@@ -155,3 +155,36 @@ UEFI启动模式
 重启
 
     reboot
+
+
+---
+
+
+### Arch Linux
+
+联网
+
+    systemctl start  NetworkManager
+
+    systemctl enable NetworkManager
+
+    systemctl start  dhcpcd
+
+    systamctl enable dhcpcd
+
+    然后用nmcli或nmtui（推荐）联网就可以了
+
+安装 man 手册
+
+    pacman -S man
+
+创建一个普通用户
+
+    useradd -m -G wheel yrxns
+
+    passwd yrxns
+
+    ln -s /usr/bin/vim /usr/bin/vi
+
+    visudo
+    # %wheel ALL=(ALL) ALL
