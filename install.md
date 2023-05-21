@@ -188,3 +188,14 @@ UEFI启动模式
 
     visudo
     # %wheel ALL=(ALL) ALL
+
+
+换源和更新系统
+
+    vim /etc/pacman.d/mirrorlist
+
+     Server = https://repo.huaweicloud.com/archlinux/$repo/os/$arch
+
+     Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+
+    pacman -Syyu
