@@ -5,6 +5,8 @@
 
 ```
 ip link
+
+rfkill
 ```
 
 ```
