@@ -253,9 +253,9 @@ Hack字体
 
     tar -xf Hack.tar.xz
 
-    cp -r Hack  ~/.local/share/fonts/
+    cp -r Hack/  ~/.local/share/fonts/
 
-    cp -r Hack  /usr/local/share/fonts/
+    cp -r Hack/  /usr/local/share/fonts/
 
     fc-cache -f -v
 
