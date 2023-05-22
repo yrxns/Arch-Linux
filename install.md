@@ -201,3 +201,82 @@ UEFI启动模式
      Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
     pacman -Syyu
+
+git
+
+    sudo pacman -S git
+
+    git config --global user.name "yrxns"
+
+    git config --global user.email "819924033@qq.com"
+
+    vim ~/.gitconfig
+
+    ssh-keygen -t rsa -C "819924033@qq.com"
+
+    cat ~/.ssh/id_rsa.pub
+
+    ssh -T git@github.com
+
+
+
+### 桌面环境
+
+安装显卡驱动
+
+![img/qudong.png](img/qudong.png)
+
+    sudo pacman -S xf86-video-intel
+
+Xorg桌面服务
+
+    sudo pacman -S xorg xorg-server xorg-xinit
+
+fish
+
+    sudo pacman -S fish
+
+    chsh -l
+
+    chsh -s /bin/fish
+
+
+Hack字体
+
+[nerd-fonts](https://github.com/ryanoasis/nerd-fonts#option-2-release-archive-download)
+
+    wget https://github.com/yanoasis/nerd-fonts/releases/download/v3.0.1/Hack.tar.xz
+
+    sudo apt install unar
+
+    unar Hack.tar.xz
+
+    tar -xf Hack.tar.xz
+
+    cp -r Hack  ~/.local/share/fonts/
+
+    cp -r Hack  /usr/local/share/fonts/
+
+    fc-cache -f -v
+
+    fc-list | grep "Hack"
+
+    sudo setfont ~/.local/share/fonts/Hack
+
+    vim ~/.fishrc
+    sudo setfont ~/.local/share/fonts/Hack
+    fc-cache -f -v
+
+>检查能否正常显示小图标
+
+[cheat-sheet](https://www.nerdfonts.com/cheat-sheet)
+
+dwn
+
+    sudo pacman -S w3n
+
+    mkdir ~/suckless
+
+    cd ~/suckless
+
+    git clone https://git.suckless.org/dwm
