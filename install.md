@@ -245,7 +245,7 @@ Hack字体
 
 [nerd-fonts](https://github.com/ryanoasis/nerd-fonts#option-2-release-archive-download)
 
-    wget https://github.com/yanoasis/nerd-fonts/releases/download/v3.0.1/Hack.tar.xz
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/Hack.tar.xz
 
     sudo apt install unar
 
