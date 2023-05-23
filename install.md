@@ -219,6 +219,13 @@ git
     ssh -T git@github.com
 
 
+yay
+
+    git clone https://github.com/Jguer/yay.git
+
+    cd yay-bin
+
+    makepkg -si
 
 ### 桌面环境
 
