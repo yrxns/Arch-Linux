@@ -247,6 +247,12 @@ fish
 
     chsh -s /bin/fish
 
+键位
+
+    sudo vim /usr/share/X11/xkb/keycodes/evdev
+
+    reboot
+
 
 Hack字体
 
